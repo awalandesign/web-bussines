@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awalan Design.id | Jasa Desain Grafis Profesional untuk UMKM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #dbeafe;
+            --secondary: #f59e0b;
+            --secondary-dark: #d97706;
+            --dark: #1f2937;
+            --gray: #6b7280;
+            --light-gray: #f3f4f6;
+            --white: #ffffff;
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.1);
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+            font-size: 1.05rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            color: var(--gray);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 6rem 0;
+        }
+
+        .section-light {
+            background-color: var(--light-gray);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.875rem 2rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .mb-1 { margin-bottom: 0.5rem; }
+        .mb-2 { margin-bottom: 1rem; }
+        .mb-3 { margin-bottom: 1.5rem; }
+        .mb-4 { margin-bottom: 2rem; }
+        .mb-5 { margin-bottom: 3rem; }
+
+        .mt-1 { margin-top: 0.5rem; }
+        .mt-2 { margin-top: 1rem; }
+        .mt-3 { margin-top: 1.5rem; }
+        .mt-4 { margin-top: 2rem; }
+        .mt-5 { margin-top: 3rem; }
+
+        .highlight {
+            background-color: var(--primary-light);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 0.5rem 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.75rem;
+            color: var(--primary);
+            gap: 0.75rem;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-menu li {
+            list-style: none;
+        }
+
+        .nav-menu a {
+            font-weight: 600;
+            font-size: 1rem;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-menu a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+            border-radius: 3px;
+        }
+
+        .nav-menu a:hover:after,
+        .nav-menu a.active:after {
+            width: 100%;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 12rem 0 6rem;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(245, 158, 11, 0.05) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+            top: -250px;
+            right: -250px;
+            z-index: 0;
+        }
+
+        .hero:after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+            bottom: -150px;
+            left: -150px;
+            z-index: 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .experience-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: var(--white);
+            color: var(--dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: var(--shadow);
+        }
+
+        .experience-badge i {
+            color: var(--secondary);
+            font-size: 1.25rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-visual {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: var(--radius);
+            padding: 2rem;
+            color: white;
+            box-shadow: var(--shadow-lg);
+            transform: perspective(1000px) rotateY(-10deg);
+            transition: var(--transition);
+        }
+
+        .hero-visual:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border-top: 5px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-top-color: var(--primary);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        /* Portfolio Section */
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background-color: var(--light-gray);
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-item {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            background-color: var(--white);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .portfolio-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-info {
+            padding: 1.5rem;
+        }
+
+        .portfolio-category {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Pricing Section */
+        .pricing-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .pricing-tab {
+            padding: 1rem 2rem;
+            background-color: var(--light-gray);
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .pricing-tab.active {
+            background-color: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pricing-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 3rem 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            border: 2px solid transparent;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-card.popular {
+            border-color: var(--secondary);
+            transform: scale(1.05);
+        }
+
+        .pricing-card.popular:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 1.5rem 0;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            color: var(--gray);
+            font-size: 1.25rem;
+            margin-left: 0.5rem;
+        }
+
+        .pricing-features {
+            margin: 2rem 0;
+        }
+
+        .pricing-features li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .pricing-features i.fa-check {
+            color: #10b981;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .pricing-features i.fa-times {
+            color: #ef4444;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-top: 3rem;
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--white);
+        }
+
+        .price-table th {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1.25rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .price-table td {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .price-table tr:hover {
+            background-color: var(--primary-light);
+        }
+
+        .price-table .highlight-cell {
+            background-color: rgba(245, 158, 11, 0.1);
+            font-weight: 600;
+            color: var(--secondary-dark);
+        }
+
+        /* Testimonials */
+        .testimonial-slider {
+            max-width: 900px;
+            margin: 3rem auto 0;
+        }
+
+        .testimonial-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            margin: 1rem;
+            position: relative;
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .testimonial-content:before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--primary-light);
+            position: absolute;
+            top: -1.5rem;
+            left: -1rem;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-light);
+        }
+
+        .testimonial-info h4 {
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-info p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .rating {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: var(--primary);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .contact-icon {
+            background-color: var(--primary-light);
+            color: var(--primary);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.5rem;
+        }
+
+        .contact-details h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details a {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .contact-details a:hover {
+            color: var(--secondary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+
+        .contact-form {
+            background-color: var(--white);
+            padding: 3rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--radius);
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 0.5rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.75rem;
+            border-radius: var(--radius);
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-5px);
+        }
+
+        /* Mobile Responsive */
+        @media screen and (max-width: 1024px) {
+            h1 {
+                font-size: 2.75rem;
+            }
+            
+            h2 {
+                font-size: 2.25rem;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+            
+            .pricing-card.popular:hover {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .header-container {
+                padding: 1rem;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                flex-direction: column;
+                background-color: var(--white);
+                width: 100%;
+                text-align: center;
+                box-shadow: var(--shadow-lg);
+                padding: 2rem 0;
+                transition: var(--transition);
+                z-index: 999;
+                gap: 0;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 0.75rem 0;
+            }
+            
+            .nav-menu a {
+                padding: 0.75rem;
+                display: block;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-cta {
+                display: none;
+            }
+            
+            .hero {
+                padding: 10rem 0 4rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+            }
+            
+            .hero-btns .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 4rem 0;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 2.25rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .pricing-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .logo-img {
+                width: 40px;
+                height: 40px;
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-img">AD</div>
+                <span>Awalan Design.id</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="active">Beranda</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#portfolio">Portofolio</a></li>
+                    <li><a href="#pricing">Price List</a></li>
+                    <li><a href="#testimonials">Testimoni</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+                
+                <div class="nav-cta">
+                    <a href="https://wa.me/6285815056990" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Konsultasi Gratis
+                    </a>
+                </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Desain Grafis Profesional untuk Pertumbuhan UMKM Anda</h1>
+                    <p>Dengan <span class="highlight">10 tahun pengalaman</span> di bidang desain grafis, kami membantu UMKM, pelaku bisnis, dan mahasiswa menciptakan identitas visual yang kuat dan menarik untuk meningkatkan brand awareness dan penjualan.</p>
+                    
+                    <div class="hero-btns">
+                        <a href="#portfolio" class="btn btn-primary">
+                            <i class="fas fa-images"></i> Lihat Portofolio
+                        </a>
+                        <a href="#pricing" class="btn btn-outline">
+                            <i class="fas fa-tags"></i> Lihat Harga
+                        </a>
+                    </div>
+                    
+                    <div class="experience-badge">
+                        <i class="fas fa-award"></i> 10+ Tahun Pengalaman Profesional
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Proyek Selesai</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">300+</div>
+                            <div class="stat-label">Klien UMKM</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Kepuasan Klien</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="hero-visual">
+                        <h3 style="color: white; margin-bottom: 1rem;">Solusi Desain UMKM</h3>
+                        <p style="color: rgba(255,255,255,0.9);">Logo • Branding • Social Media • Marketing Materials</p>
+                        <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+                            <div style="background: rgba(255,255,255,0.2); padding: 0.75rem; border-radius: 8px;">
+                                <i class="fas fa-bolt" style="color: white;"></i>
+                                <div style="color: white; font-weight: 600; margin-top: 0.5rem;">Cepat</div>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.2); padding: 0.75rem; border-radius: 8px;">
+                                <i class="fas fa-medal" style="color: white;"></i>
+                                <div style="color: white; font-weight: 600; margin-top: 0.5rem;">Berkualitas</div>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.2); padding: 0.75rem; border-radius: 8px;">
+                                <i class="fas fa-handshake" style="color: white;"></i>
+                                <div style="color: white; font-weight: 600; margin-top: 0.5rem;">Terjangkau</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <h2>Layanan Kami</h2>
+            <p class="text-center mb-5">Kami menawarkan berbagai layanan desain grafis profesional yang dirancang khusus untuk kebutuhan UMKM dan bisnis Anda.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h3>Desain Logo & Branding</h3>
+                    <p>Logo unik dan memorable yang merepresentasikan identitas bisnis Anda dengan sempurna.</p>
+                    <a href="#pricing" class="btn btn-outline">Lihat Harga</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Stationery & Perusahaan</h3>
+                    <p>Kartu nama, kop surat, amplop, faktur, dan materi branding lainnya yang konsisten dan profesional.</p>
+                    <a href="#pricing" class="btn btn-outline">Lihat Harga</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ad"></i>
+                    </div>
+                    <h3>Desain Marketing</h3>
+                    <p>Brosur, flyer, banner, poster, katalog, dan materi pemasaran lainnya yang eye-catching.</p>
+                    <a href="#pricing" class="btn btn-outline">Lihat Harga</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Desain Apparel</h3>
+                    <p>Desain kaos, jaket, topi, tas, dan merchandise lainnya untuk promosi bisnis Anda.</p>
+                    <a href="#pricing" class="btn btn-outline">Lihat Harga</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Desain Sertifikat</h3>
+                    <p>Sertifikat profesional untuk acara, penghargaan, workshop, atau pelatihan bisnis Anda.</p>
+                    <a href="#pricing" class="btn btn-outline">Lihat Harga</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3>Konten Sosial Media</h3>
+                    <p>Feed Instagram, story, banner Facebook, cover YouTube, dan konten media sosial lainnya yang menarik.</p>
+                    <a href="#pricing" class="btn btn-outline">Lihat Harga</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section section-light" id="portfolio">
+        <div class="container">
+            <h2>Portofolio Kami</h2>
+            <p class="text-center mb-5">Berikut adalah beberapa hasil karya desain kami untuk berbagai klien UMKM dan bisnis.</p>
+            
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="logo">Logo</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+                <button class="filter-btn" data-filter="social-media">Sosial Media</button>
+                <button class="filter-btn" data-filter="apparel">Apparel</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Portfolio items will be dynamically loaded -->
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="https://drive.google.com/drive/folders/1FjXzKSZ8S1TunF7wx2FQMCrdFnfwrlW_?usp=drive_link" 
+                   class="btn btn-primary" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Lihat Portofolio Lengkap
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <h2>Price List</h2>
+            <p class="text-center mb-5">Pilih paket yang sesuai dengan kebutuhan dan anggaran bisnis Anda. Konsultasi gratis untuk semua paket.</p>
+            
+            <!-- Pricing Tabs -->
+            <div class="pricing-tabs">
+                <button class="pricing-tab active" data-tab="umkm">Paket UMKM</button>
+                <button class="pricing-tab" data-tab="item">Harga Per Item</button>
+                <button class="pricing-tab" data-tab="mahasiswa">Paket Mahasiswa</button>
+            </div>
+            
+            <!-- UMKM Packages -->
+            <div class="pricing-content" id="umkm-packages">
+                <div class="pricing-container">
+                    <!-- Paket Starter -->
+                    <div class="pricing-card">
+                        <h3>Paket Starter</h3>
+                        <div class="price">Rp 299K <span class="price-old">Rp 499K</span></div>
+                        <p>Untuk UMKM baru mulai, mahasiswa, proyek sederhana</p>
+                        
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 1 Desain Logo sederhana</li>
+                            <li><i class="fas fa-check"></i> 2-3 Revisi minor</li>
+                            <li><i class="fas fa-check"></i> File PNG & JPG (web quality)</li>
+                            <li><i class="fas fa-check"></i> Waktu: 3-5 hari kerja</li>
+                            <li><i class="fas fa-times"></i> Tidak termasuk file master (AI/PSD)</li>
+                            <li><i class="fas fa-times"></i> Tidak termasuk stationery</li>
+                        </ul>
+                        
+                        <p class="mb-3"><strong>Best for:</strong> Usaha mikro, proyek kampus, freelance kecil</p>
+                        
+                        <a href="https://wa.me/6285815056990?text=Saya%20tertarik%20dengan%20Paket%20Starter" 
+                           class="btn btn-primary" style="width: 100%;" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                        </a>
+                    </div>
+                    
+                    <!-- Paket UMKM Premium -->
+                    <div class="pricing-card popular">
+                        <div class="popular-badge">MOST POPULAR</div>
+                        <h3>Paket UMKM Premium</h3>
+                        <div class="price">Rp 799K <span class="price-old">Rp 1.299K</span></div>
+                        <p>Untuk UMKM berkembang, butuh identitas brand lengkap</p>
+                        
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Logo profesional (3 konsep pilihan)</li>
+                            <li><i class="fas fa-check"></i> Kartu nama & kop surat</li>
+                            <li><i class="fas fa-check"></i> 5-7 Revisi</li>
+                            <li><i class="fas fa-check"></i> File PNG, JPG, PDF (print ready)</li>
+                            <li><i class="fas fa-check"></i> Panduan warna & tipografi dasar</li>
+                            <li><i class="fas fa-check"></i> Bonus: 1 desain sosial media</li>
+                            <li><i class="fas fa-check"></i> Waktu: 5-7 hari kerja</li>
+                        </ul>
+                        
+                        <p class="mb-3"><strong>Best for:</strong> Café, toko online, jasa lokal, startup kecil</p>
+                        
+                        <a href="https://wa.me/6285815056990?text=Saya%20tertarik%20dengan%20Paket%20UMKM%20Premium" 
+                           class="btn btn-secondary" style="width: 100%;" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                        </a>
+                    </div>
+                    
+                    <!-- Paket Business Growth -->
+                    <div class="pricing-card">
+                        <h3>Paket Business Growth</h3>
+                        <div class="price">Rp 1.899K <span class="price-old">Rp 2.999K</span></div>
+                        <p>Untuk bisnis yang ingin scaling, perlu konsistensi brand</p>
+                        
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Full Brand Identity Package</li>
+                            <li><i class="fas fa-check"></i> Logo + alternatif logo</li>
+                            <li><i class="fas fa-check"></i> Stationery lengkap (kartu nama, kop, amplop, faktur)</li>
+                            <li><i class="fas fa-check"></i> Social Media Kit (5-10 template feed/ig story)</li>
+                            <li><i class="fas fa-check"></i> Brand Guidelines mini (1-2 halaman)</li>
+                            <li><i class="fas fa-check"></i> Unlimited revisi (dalam batas wajar)</li>
+                            <li><i class="fas fa-check"></i> File master AI/PSD</li>
+                            <li><i class="fas fa-check"></i> Waktu: 7-10 hari kerja</li>
+                        </ul>
+                        
+                        <p class="mb-3"><strong>Best for:</strong> Franchise lokal, distributor, bisnis dengan multiple outlet</p>
+                        
+                        <a href="https://wa.me/6285815056990?text=Saya%20tertarik%20dengan%20Paket%20Business%20Growth" 
+                           class="btn btn-primary" style="width: 100%;" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Per Item Pricing -->
+            <div class="pricing-content" id="item-packages" style="display: none;">
+                <div class="table-container">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Layanan</th>
+                                <th>Harga Mulai</th>
+                                <th>Waktu</th>
+                                <th>Include</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Logo Only</strong></td>
+                                <td class="highlight-cell">Rp 399.000</td>
+                                <td>3-5 hari</td>
+                                <td>2 konsep, 3 revisi, file PNG/JPG</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Logo + Kartu Nama</strong></td>
+                                <td class="highlight-cell">Rp 549.000</td>
+                                <td>4-6 hari</td>
+                                <td>Logo + 1 sisi kartu nama</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Social Media Kit</strong></td>
+                                <td class="highlight-cell">Rp 299.000/5 posts</td>
+                                <td>3-4 hari</td>
+                                <td>Template feed IG/FB</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Brosur/Flyer</strong></td>
+                                <td class="highlight-cell">Rp 249.000/sisi</td>
+                                <td>2-3 hari</td>
+                                <td>Desain 1 halaman A5/A4</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Desain Kaos</strong></td>
+                                <td class="highlight-cell">Rp 199.000/design</td>
+                                <td>2-3 hari</td>
+                                <td>1 konsep, file print ready</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sertifikat</strong></td>
+                                <td class="highlight-cell">Rp 179.000</td>
+                                <td>1-2 hari</td>
+                                <td>Template + customisasi data</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Banner/Spanduk</strong></td>
+                                <td class="highlight-cell">Rp 349.000</td>
+                                <td>3-4 hari</td>
+                                <td>Desain ukuran custom</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Menu Restoran</strong></td>
+                                <td class="highlight-cell">Rp 449.000</td>
+                                <td>4-5 hari</td>
+                                <td>Cover + isi (max 4 halaman)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Company Profile</strong></td>
+                                <td class="highlight-cell">Rp 1.499.000</td>
+                                <td>7-10 hari</td>
+                                <td>8-12 halaman, print & digital</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="https://wa.me/6285815056990?text=Saya%20ingin%20konsultasi%20tentang%20layanan%20per%20item" 
+                       class="btn btn-primary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Konsultasi Layanan Lainnya
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Mahasiswa Packages -->
+            <div class="pricing-content" id="mahasiswa-packages" style="display: none;">
+                <div class="pricing-container">
+                    <!-- Paket Skripsi -->
+                    <div class="pricing-card">
+                        <h3>Paket Skripsi/Tugas Akhir</h3>
+                        <div class="price">Rp 199K</div>
+                        <p>Khusus mahasiswa dengan menunjukkan KTM</p>
+                        
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Desain cover laporan skripsi</li>
+                            <li><i class="fas fa-check"></i> Template presentasi (5 slide)</li>
+                            <li><i class="fas fa-check"></i> 1 desain poster penelitian</li>
+                            <li><i class="fas fa-check"></i> 3 Revisi minor</li>
+                            <li><i class="fas fa-check"></i> File print ready (PDF)</li>
+                            <li><i class="fas fa-check"></i> Waktu: 3-5 hari kerja</li>
+                        </ul>
+                        
+                        <p class="mb-3"><strong>Syarat:</strong> Tunjukkan KTM</p>
+                        
+                        <a href="https://wa.me/6285815056990?text=Saya%20mahasiswa,%20tertarik%20dengan%20Paket%20Skripsi" 
+                           class="btn btn-primary" style="width: 100%;" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                        </a>
+                    </div>
+                    
+                    <!-- Paket UKM Kampus -->
+                    <div class="pricing-card popular">
+                        <div class="popular-badge">DISKON MAHASISWA</div>
+                        <h3>Paket UKM/HMJ Kampus</h3>
+                        <div class="price">Rp 349K</div>
+                        <p>Khusus UKM kampus dan organisasi mahasiswa</p>
+                        
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Logo UKM kampus</li>
+                            <li><i class="fas fa-check"></i> 3 desain feed Instagram</li>
+                            <li><i class="fas fa-check"></i> Desain sertifikat kegiatan</li>
+                            <li><i class="fas fa-check"></i> File semua media (print & digital)</li>
+                            <li><i class="fas fa-check"></i> 5 Revisi</li>
+                            <li><i class="fas fa-check"></i> Bonus: Desain ID card</li>
+                            <li><i class="fas fa-check"></i> Waktu: 5-7 hari kerja</li>
+                        </ul>
+                        
+                        <p class="mb-3"><strong>Syarat:</strong> Tunjukkan KTM atau surat pengantar UKM</p>
+                        
+                        <a href="https://wa.me/6285815056990?text=Saya%20dari%20UKM%20kampus,%20tertarik%20dengan%20Paket%20UKM%20Kampus" 
+                           class="btn btn-secondary" style="width: 100%;" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p style="font-style: italic; color: var(--gray);">
+                    *Harga dapat berubah sesuai kompleksitas proyek. Konsultasi gratis untuk penawaran custom.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section-light" id="testimonials">
+        <div class="container">
+            <h2>Testimoni Klien</h2>
+            <p class="text-center mb-5">Apa kata klien kami yang telah menggunakan jasa desain grafis profesional kami.</p>
+            
+            <div class="testimonial-slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonials will be dynamically loaded -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <p class="text-center mb-5">Konsultasikan kebutuhan desain grafis Anda dengan tim profesional kami. Respons cepat via WhatsApp.</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Alamat</h4>
+                            <p>JL. KH Ahmad Dahlan RT02/RW01 Rumah No 40<br>
+                            Desa Mojopetung, Kecamatan Dukun<br>
+                            Kabupaten Gresik, Jawa Timur 61155</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telepon / WhatsApp</h4>
+                            <p><a href="https://wa.me/6285815056990" target="_blank">0858-1505-6990</a></p>
+                            <p>Senin - Sabtu: 08:00 - 17:00 WIB</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:awalandesign.id@gmail.com">awalandesign.id@gmail.com</a></p>
+                            <p>Respon maksimal 1x24 jam</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Sosial Media</h4>
+                            <div class="social-links">
+                                <a href="https://wa.me/6285815056990" target="_blank" title="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="mailto:awalandesign.id@gmail.com" title="Email">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="#" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" title="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Konsultasi Gratis</h3>
+                    <p>Isi form berikut untuk konsultasi kebutuhan desain Anda.</p>
+                    
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap *</label>
+                                <input type="text" id="name" class="form-control" placeholder="Masukkan nama Anda" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Nomor WhatsApp *</label>
+                                <input type="tel" id="phone" class="form-control" placeholder="Masukkan nomor WhatsApp" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="Masukkan email Anda">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Jenis Layanan yang Diinginkan *</label>
+                            <select id="service" class="form-control" required>
+                                <option value="" selected disabled>Pilih layanan</option>
+                                <option value="paket-starter">Paket Starter</option>
+                                <option value="paket-umkm">Paket UMKM Premium</option>
+                                <option value="paket-business">Paket Business Growth</option>
+                                <option value="paket-mahasiswa">Paket Mahasiswa</option>
+                                <option value="logo-only">Logo Only</option>
+                                <option value="social-media">Social Media Kit</option>
+                                <option value="brosur">Brosur/Flyer</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Deskripsi Proyek *</label>
+                            <textarea id="message" class="form-control" placeholder="Jelaskan kebutuhan desain Anda, jenis usaha, preferensi warna, dll." rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i> Kirim via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <div class="logo" style="color: white; margin-bottom: 1.5rem;">
+                        <div class="logo-img" style="background: white; color: var(--primary);">AD</div>
+                        <span>Awalan Design.id</span>
+                    </div>
+                    <p>Jasa desain grafis profesional dengan pengalaman 10 tahun, khusus melayani UMKM, pelaku bisnis, dan mahasiswa untuk menciptakan identitas visual yang kuat dan menarik.</p>
+                    
+                    <div class="social-links" style="margin-top: 1.5rem;">
+                        <a href="https://wa.me/6285815056990" target="_blank" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:awalandesign.id@gmail.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="#" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Layanan Kami</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Desain Logo & Branding</a></li>
+                        <li><a href="#services">Stationery & Perusahaan</a></li>
+                        <li><a href="#services">Desain Marketing</a></li>
+                        <li><a href="#services">Desain Apparel</a></li>
+                        <li><a href="#services">Konten Sosial Media</a></li>
+                        <li><a href="#services">Desain Sertifikat</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Paket Harga</h3>
+                    <ul class="footer-links">
+                        <li><a href="#pricing">Paket Starter</a></li>
+                        <li><a href="#pricing">Paket UMKM Premium</a></li>
+                        <li><a href="#pricing">Paket Business Growth</a></li>
+                        <li><a href="#pricing">Paket Mahasiswa</a></li>
+                        <li><a href="#pricing">Harga Per Item</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Kontak</h3>
+                    <p><i class="fas fa-phone-alt" style="margin-right: 0.5rem;"></i> <a href="https://wa.me/6285815056990">0858-1505-6990</a></p>
+                    <p><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i> <a href="mailto:awalandesign.id@gmail.com">awalandesign.id@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i> Gresik, Jawa Timur</p>
+                    
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Email untuk update">
+                        <button type="submit" class="btn btn-secondary" style="padding: 0.75rem 1rem;">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> Awalan Design.id. All rights reserved.</p>
+                <p>Jasa Desain Grafis Profesional untuk UMKM</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Navigation Toggle
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('navMenu');
+            
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                hamburger.innerHTML = navMenu.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Close mobile menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+            
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.getElementById('header');
+                const backToTop = document.getElementById('backToTop');
+                
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                if (window.scrollY > 500) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+                
+                // Update active nav link based on scroll position
+                updateActiveNavLink();
+            });
+            
+            // Update active navigation link based on scroll position
+            function updateActiveNavLink() {
+                const sections = document.querySelectorAll('section[id]');
+                const scrollPosition = window.scrollY + 100;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }
+            
+            // Back to top button
+            document.getElementById('backToTop').addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Portfolio Filter Functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioGrid = document.querySelector('.portfolio-grid');
+            
+            // Portfolio data
+            const portfolioItems = [
+                {
+                    id: 1,
+                    category: 'logo',
+                    title: 'Logo UMKM Kuliner',
+                    description: 'Desain logo untuk usaha makanan tradisional dengan sentuhan modern',
+                    color: '#FF6B6B'
+                },
+                {
+                    id: 2,
+                    category: 'logo',
+                    title: 'Logo Startup Teknologi',
+                    description: 'Logo futuristic untuk perusahaan teknologi lokal',
+                    color: '#4ECDC4'
+                },
+                {
+                    id: 3,
+                    category: 'branding',
+                    title: 'Branding Kopi Shop',
+                    description: 'Full branding package untuk café lokal',
+                    color: '#FFD166'
+                },
+                {
+                    id: 4,
+                    category: 'marketing',
+                    title: 'Brosur Promosi UMKM',
+                    description: 'Brosur A4 untuk promosi produk lokal',
+                    color: '#06D6A0'
+                },
+                {
+                    id: 5,
+                    category: 'social-media',
+                    title: 'Social Media Kit Fashion',
+                    description: '15 konten Instagram untuk brand fashion lokal',
+                    color: '#118AB2'
+                },
+                {
+                    id: 6,
+                    category: 'social-media',
+                    title: 'Facebook Ads Banner',
+                    description: 'Banner iklan untuk kampanye Facebook Ads',
+                    color: '#EF476F'
+                },
+                {
+                    id: 7,
+                    category: 'apparel',
+                    title: 'Desain Kaos Komunitas',
+                    description: 'Merchandise kaos untuk komunitas bisnis',
+                    color: '#073B4C'
+                },
+                {
+                    id: 8,
+                    category: 'marketing',
+                    title: 'Company Profile',
+                    description: 'Buku company profile 12 halaman',
+                    color: '#7209B7'
+                },
+                {
+                    id: 9,
+                    category: 'apparel',
+                    title: 'Desain Jaket Brand',
+                    description: 'Jaket custom untuk merchandise brand',
+                    color: '#F3722C'
+                }
+            ];
+            
+            // Function to display portfolio items
+            function displayPortfolioItems(filter = 'all') {
+                portfolioGrid.innerHTML = '';
+                
+                const filteredItems = filter === 'all' 
+                    ? portfolioItems 
+                    : portfolioItems.filter(item => item.category === filter);
+                
+                filteredItems.forEach(item => {
+                    const portfolioItem = document.createElement('div');
+                    portfolioItem.className = 'portfolio-item';
+                    portfolioItem.setAttribute('data-category', item.category);
+                    
+                    portfolioItem.innerHTML = `
+                        <div class="portfolio-img" style="background-color: ${item.color}; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                            <i class="fas fa-${getCategoryIcon(item.category)}"></i>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">${getCategoryName(item.category)}</span>
+                            <h3>${item.title}</h3>
+                            <p>${item.description}</p>
+                        </div>
+                    `;
+                    
+                    portfolioGrid.appendChild(portfolioItem);
+                });
+            }
+            
+            // Helper function to get icon based on category
+            function getCategoryIcon(category) {
+                const icons = {
+                    'logo': 'pen-nib',
+                    'branding': 'palette',
+                    'marketing': 'bullhorn',
+                    'social-media': 'hashtag',
+                    'apparel': 'tshirt'
+                };
+                return icons[category] || 'image';
+            }
+            
+            // Helper function to get category name
+            function getCategoryName(category) {
+                const names = {
+                    'logo': 'Logo',
+                    'branding': 'Branding',
+                    'marketing': 'Marketing',
+                    'social-media': 'Sosial Media',
+                    'apparel': 'Apparel'
+                };
+                return names[category] || 'Kategori';
+            }
+            
+            // Initialize portfolio with all items
+            displayPortfolioItems();
+            
+            // Add click events to filter buttons
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Filter portfolio items
+                    const filterValue = this.getAttribute('data-filter');
+                    displayPortfolioItems(filterValue);
+                });
+            });
+            
+            // Pricing Tabs
+            const pricingTabs = document.querySelectorAll('.pricing-tab');
+            const pricingContents = document.querySelectorAll('.pricing-content');
+            
+            pricingTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all tabs
+                    pricingTabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Hide all pricing contents
+                    pricingContents.forEach(content => {
+                        content.style.display = 'none';
+                    });
+                    
+                    // Show selected pricing content
+                    document.getElementById(`${tabId}-packages`).style.display = 'block';
+                });
+            });
+            
+            // Testimonials Data
+            const testimonials = [
+                {
+                    name: 'Budi Santoso',
+                    role: 'Pemilik UMKM Makanan "Rasa Nusantara"',
+                    content: 'Logo yang dibuat oleh Awalan Design.id sangat merepresentasikan bisnis saya. Hasilnya profesional dan proses pengerjaannya cepat. Pelanggan sekarang lebih mudah mengingat brand saya!',
+                    rating: 5,
+                    avatarColor: '#FF6B6B'
+                },
+                {
+                    name: 'Sari Dewi',
+                    role: 'Mahasiswa & Pengusaha Startup',
+                    content: 'Sebagai mahasiswa yang baru memulai bisnis, budget terbatas. Tapi tim Awalan Design.id memberikan hasil yang luar biasa dengan harga yang terjangkau. Desain brosur dan sosial media saya sekarang sangat menarik!',
+                    rating: 5,
+                    avatarColor: '#4ECDC4'
+                },
+                {
+                    name: 'Agus Wijaya',
+                    role: 'Pemilik Toko Online "Gadget Murah"',
+                    content: '10 tahun pengalaman benar-benar terasa. Desain yang diberikan tidak hanya bagus tapi juga strategis untuk pemasaran. Penjualan meningkat 40% setelah menggunakan jasa mereka.',
+                    rating: 5,
+                    avatarColor: '#118AB2'
+                },
+                {
+                    name: 'Linda Putri',
+                    role: 'Manajer Event Kampus',
+                    content: 'Desain sertifikat dan materi promosi untuk acara kampus kami sangat elegan dan profesional. Timnya responsif dan mudah diajak berkomunikasi. Hasilnya melebihi ekspektasi!',
+                    rating: 5,
+                    avatarColor: '#EF476F'
+                },
+                {
+                    name: 'Rendra Pratama',
+                    role: 'Pemilik Café "Kopi Teman"',
+                    content: 'Desain kaos merchandise untuk café saya sangat kreatif! Pelanggan banyak yang suka dan ingin membeli. Terima kasih Awalan Design.id!',
+                    rating: 5,
+                    avatarColor: '#073B4C'
+                },
+                {
+                    name: 'Dewi Anggraeni',
+                    role: 'Pemilik Butik Fashion',
+                    content: 'Social media kit yang dibuat sangat cocok dengan brand saya. Engagement di Instagram meningkat drastis sejak menggunakan desain dari Awalan Design.id.',
+                    rating: 5,
+                    avatarColor: '#7209B7'
+                }
+            ];
+            
+            // Initialize Testimonials Slider
+            let swiperInstance = null;
+            
+            function initTestimonialSlider() {
+                const swiperWrapper = document.querySelector('.swiper-wrapper');
+                
+                // Clear existing content
+                swiperWrapper.innerHTML = '';
+                
+                // Add testimonial slides
+                testimonials.forEach(testimonial => {
+                    const slide = document.createElement('div');
+                    slide.className = 'swiper-slide';
+                    
+                    // Create rating stars
+                    let stars = '';
+                    for (let i = 0; i < testimonial.rating; i++) {
+                        stars += '<i class="fas fa-star"></i>';
+                    }
+                    
+                    slide.innerHTML = `
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>${testimonial.content}</p>
+                            </div>
+                            <div class="rating">
+                                ${stars}
+                            </div>
+                            <div class="testimonial-author">
+                                <div style="width: 60px; height: 60px; background-color: ${testimonial.avatarColor}; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem;">
+                                    ${testimonial.name.charAt(0)}
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4>${testimonial.name}</h4>
+                                    <p>${testimonial.role}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    swiperWrapper.appendChild(slide);
+                });
+                
+                // Initialize Swiper
+                swiperInstance = new Swiper('.swiper-container', {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    loop: true,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        }
+                    }
+                });
+            }
+            
+            // Load Swiper when the page loads
+            initTestimonialSlider();
+            
+            // Contact Form Submission
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    const service = document.getElementById('service').value;
+                    const message = document.getElementById('message').value;
+                    
+                    // Service names mapping
+                    const serviceNames = {
+                        'paket-starter': 'Paket Starter',
+                        'paket-umkm': 'Paket UMKM Premium',
+                        'paket-business': 'Paket Business Growth',
+                        'paket-mahasiswa': 'Paket Mahasiswa',
+                        'logo-only': 'Logo Only',
+                        'social-media': 'Social Media Kit',
+                        'brosur': 'Brosur/Flyer',
+                        'lainnya': 'Lainnya'
+                    };
+                    
+                    // Create WhatsApp message
+                    const whatsappMessage = `Halo Awalan Design.id,
+
+Saya ${name}, tertarik dengan layanan desain grafis Anda.
+
+Berikut detail permintaan saya:
+- Nama: ${name}
+- Email: ${email}
+- WhatsApp: ${phone}
+- Layanan: ${serviceNames[service] || service}
+- Pesan: ${message}
+
+Mohon info lebih lanjut mengenai layanan Anda. Terima kasih!`;
+                    
+                    // Encode message for URL
+                    const encodedMessage = encodeURIComponent(whatsappMessage);
+                    
+                    // Create WhatsApp URL
+                    const whatsappURL = `https://wa.me/6285815056990?text=${encodedMessage}`;
+                    
+                    // Open WhatsApp in new tab
+                    window.open(whatsappURL, '_blank');
+                    
+                    // Reset form
+                    contactForm.reset();
+                });
+            }
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Initialize active nav link on page load
+            updateActiveNavLink();
+            
+            // Animate elements on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Animate service cards
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                card.style.transitionDelay = `${index * 0.1}s`;
+                
+                observer.observe(card);
+            });
+            
+            // Animate portfolio items
+            const portfolioItemsElements = document.querySelectorAll('.portfolio-item');
+            portfolioItemsElements.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                item.style.transitionDelay = `${index * 0.1}s`;
+                
+                observer.observe(item);
+            });
+            
+            // Animate pricing cards
+            const pricingCards = document.querySelectorAll('.pricing-card');
+            pricingCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                card.style.transitionDelay = `${index * 0.2}s`;
+                
+                observer.observe(card);
+            });
+            
+            // Current year in footer copyright
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Form validation styles
+            const formInputs = document.querySelectorAll('.form-control');
+            formInputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    if (this.value.trim() === '' && this.hasAttribute('required')) {
+                        this.style.borderColor = '#ef4444';
+                    } else {
+                        this.style.borderColor = '#4ade80';
+                    }
+                });
+                
+                input.addEventListener('focus', function() {
+                    this.style.borderColor = 'var(--primary)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
